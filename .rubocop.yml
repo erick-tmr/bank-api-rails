@@ -1,0 +1,33 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude: 
+    - spec/**/*
+    
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Lint/NonLocalExitFromIterator:
+  Enabled: false
