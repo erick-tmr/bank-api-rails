@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - gem_cache:/usr/local/bundle/gems
+    env_file: .env
+    environment:
+      RAILS_ENV: development
+
+  database:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - iugu_bank_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass123
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: pass123
+
+volumes:
+  gem_cache:
+  iugu_bank_db:
