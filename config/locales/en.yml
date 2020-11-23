@@ -30,4 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        transfer:
+          attributes:
+            source:
+              required: "source account id doest not exists"
+            destination:
+              required: "destination account id doest not exists"
